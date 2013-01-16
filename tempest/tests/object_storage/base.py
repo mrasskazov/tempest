@@ -28,8 +28,11 @@ class BaseObjectTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.os = openstack.Manager()
+        cls.os_alt = openstack.AltManager()
         cls.object_client = cls.os.object_client
+        cls.object_client_alt = cls.os_alt.object_client
         cls.container_client = cls.os.container_client
+        cls.container_client_alt = cls.os_alt.container_client
         cls.account_client = cls.os.account_client
         cls.config = cls.os.config
 

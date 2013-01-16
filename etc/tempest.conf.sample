@@ -216,6 +216,12 @@ username = admin
 password = password
 # The above non-administrative user's tenant name
 tenant_name = admin
+# Number of seconds to time on waiting for a container to container
+# synchronization complete
+container_sync_timeout = 120
+# Number of seconds to wait while looping to check the status of a
+# container to container synchronization
+container_sync_interval = 5
 
 # The type of endpoint for an Object Storage API service. Unless you have a
 # custom Keystone service catalog implementation, you probably want to leave

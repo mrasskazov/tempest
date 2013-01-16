@@ -413,6 +413,17 @@ class ObjectStorageConfig(BaseConfig):
         """Catalog type of the Object-Storage service."""
         return self.get("catalog_type", 'object-store')
 
+    @property
+    def container_sync_timeout(self):
+        """Number of seconds to time on waiting for a container to container
+        synchronization complete"""
+        return self.get("container_sync_timeout", 120)
+
+    @property
+    def container_sync_interval(self):
+        """Number of seconds to wait while looping to check the status of a
+        container to container synchronization"""
+        return self.get("container_sync_interval", 5)
 
 # TODO(jaypipes): Move this to a common utils (not data_utils...)
 def singleton(cls):
