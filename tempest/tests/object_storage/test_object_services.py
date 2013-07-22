@@ -280,6 +280,7 @@ class ObjectTest(base.BaseObjectTest):
                 dst_container_name)
 
     @attr(type='smoke')
+    @testtools.skip('Feature is not supported by the FUEL')
     def test_access_public_container_object_without_using_creds(self):
         # Make container public-readable, and access the object
            # anonymously, e.g. without using credentials
