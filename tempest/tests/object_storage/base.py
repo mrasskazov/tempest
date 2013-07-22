@@ -26,7 +26,7 @@ class BaseObjectTest(tempest.test.BaseTestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.os = clients.Manager()
+        cls.os = clients.AdminManager()
         cls.object_client = cls.os.object_client
         cls.container_client = cls.os.container_client
         cls.account_client = cls.os.account_client
@@ -35,7 +35,7 @@ class BaseObjectTest(tempest.test.BaseTestCase):
         cls.token_client = cls.os_admin.token_client
         cls.identity_admin_client = cls.os_admin.identity_client
         cls.custom_account_client = cls.os.custom_account_client
-        cls.os_alt = clients.AltManager()
+        cls.os_alt = clients.AdminManager()
         cls.object_client_alt = cls.os_alt.object_client
         cls.container_client_alt = cls.os_alt.container_client
         cls.identity_client_alt = cls.os_alt.identity_client
