@@ -20,6 +20,9 @@ from tempest.test import attr
 from tempest.tests.object_storage import base
 
 
+import testtools
+
+
 class ContainerTest(base.BaseObjectTest):
 
     @classmethod
@@ -53,6 +56,7 @@ class ContainerTest(base.BaseObjectTest):
         self.assertEqual(header_value, versioned)
 
     @attr(type='smoke')
+    @testtools.skip('Feature is not supported by the FUEL')
     def test_versioned_container(self):
         # Versioned container responses tests
 
